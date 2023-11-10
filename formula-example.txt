@@ -1,0 +1,8 @@
+prop("Anzahl") - if(length(join(prop("PDF"), ",")) > 0, length(replaceAll(join(prop("PDF"),", "), "[^,]", "")) + 0, 0)
+
+
+if(prop("Anzahl") == 0, 1, (prop("Anzahl") - prop("hochgeladen")) / prop("Anzahl"))
+
+if(length(join(prop("Datei"), ",")) > prop("Anzahl"), length(replaceAll(join(prop("Datei"),", "), "[^,]", "")) + 1, 0)
+
+if(prop("Anzahl") == 0, 1, 
